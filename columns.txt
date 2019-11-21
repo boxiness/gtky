@@ -1,0 +1,46 @@
+participant_code
+gender
+age
+ethnicity
+marriage
+children
+importance of sex
+alcohol freq
+novelty seeking
+communication
+home tidiness
+religiousity
+likely to move away
+ideal Sex Freq
+hobbies
+activity level
+financial style
+cat attitudes
+political orientation
+urban rural pref
+attraction importance
+marijuana freq
+jealousy
+division of household labour
+dog attitudes
+2 marriage
+2 children
+2 importance of sex
+2 alcohol freq
+2 novelty seeking
+2 communication
+2 home tidiness
+2 religiousity
+2 likely to move away
+2 ideal Sex Freq
+2 hobbies
+2 activity level
+2 financial style
+2 cat attitudes
+2 political orientation
+2 urban rural pref
+2 attraction importance
+2 marijuana freq
+2 jealousy
+2 division of household labour
+2 dog attitudes

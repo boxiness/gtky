@@ -130,7 +130,7 @@ while True:
             print(marriage)
         if Rect2.collidepoint(pos) and pressed1:
             religion = linecache.getline("Responses.txt", 12)
-            print("To the question, \"How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious\" \n 4 = Deeply religious ,\n your partner responde:\n ")
+            print("To the question, \"How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious\" \n 5 = Deeply religious ,\n your partner responde:\n ")
             print(religion)
         if Rect4.collidepoint(pos) and pressed1:
             print("To the question, \"Do you plan to have children someday? \n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" \n your partner responded: \n ")

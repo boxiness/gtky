@@ -70,7 +70,7 @@ P2_Communication = input("When you have a disagreement with someone, how soon do
 file.write(P2_Communication + "\n")
 P2_Home_tidiness = input("How tidy do you typically keep your home? \n 1 = Very messy \n 2 = Somewhat Messy \n 3 = Neither messy nor tidy \n 4 = Somewhat tidy \n 5 = Very tidy \n")
 file.write(P2_Home_tidiness + "\n")
-P2_Religiosity = input("How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite relgious \n 4 = Deeply religious \n")
+P2_Religiosity = input("How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious \n 5 = Deeply religious \n")
 file.write(P2_Religiosity + "\n")
 P2_Likely_to_move_away = input("Do you plan to move out of Ontario someday?\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely \n ")
 file.write(P2_Likely_to_move_away + "\n")

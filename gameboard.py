@@ -1,5 +1,11 @@
 import pygame, sys, linecache, time
 from pygame.locals import*
+
+def printf(string):
+    with open("Responses.txt", "a") as file:
+        file.write(string)
+    print(string)
+
 pygame.init()
 
 start_time = time.time()
@@ -126,85 +132,85 @@ while True:
         pressed1, pressed2, pressed3 = pygame.mouse.get_pressed()
         if Rectplace.collidepoint(pos) and pressed1:
             marriage = linecache.getline("Responses.txt", 5)
-            print("To the question, \"Do you plan on getting married someday?\"\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\"\n your partner responded:\n")
-            print(marriage)
+            printf("To the question, \"Do you plan on getting married someday?\"\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\"\n your partner responded:\n")
+            printf(marriage)
         if Rect2.collidepoint(pos) and pressed1:
             religion = linecache.getline("Responses.txt", 12)
-            print("To the question, \"How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious\" \n 5 = Deeply religious ,\n your partner responde:\n ")
-            print(religion)
+            printf("To the question, \"How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious\" \n 5 = Deeply religious ,\n your partner responde:\n ")
+            printf(religion)
         if Rect4.collidepoint(pos) and pressed1:
-            print("To the question, \"Do you plan to have children someday? \n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" \n your partner responded: \n ")
+            printf("To the question, \"Do you plan to have children someday? \n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" \n your partner responded: \n ")
             children = linecache.getline("Responses.txt", 6)
-            print(children)
+            printf(children)
         if Rect7.collidepoint(pos) and pressed1:
             importancesex = linecache.getline("Responses.txt", 7)
-            print("To the question, \"How important is sex to you in a relationship? \n 1 = Not at all important \n 2 = A little important \n 3 = Somewhat important \n 4 = Very Important \n 5 = Extremely Important\" \n your partner responded: \n")
-            print(importancesex)
+            printf("To the question, \"How important is sex to you in a relationship? \n 1 = Not at all important \n 2 = A little important \n 3 = Somewhat important \n 4 = Very Important \n 5 = Extremely Important\" \n your partner responded: \n")
+            printf(importancesex)
         if Rect10.collidepoint(pos) and pressed1:
             alcohol = linecache.getline("Responses.txt", 8)
-            print("To the question, \"How often do you prefer to drink alcohol? \n 1 = Never \n 2 = A few times a year \n 3 = A few times a month \n 4 = Once a week \n 5 = Daily \"\n your partner responded: \n")
-            print(alcohol)
+            printf("To the question, \"How often do you prefer to drink alcohol? \n 1 = Never \n 2 = A few times a year \n 3 = A few times a month \n 4 = Once a week \n 5 = Daily \"\n your partner responded: \n")
+            printf(alcohol)
         if Rect13.collidepoint(pos) and pressed1:
             novelty = linecache.getline("Responses.txt", 9)
-            print("To the question, \"How much do you typically enjoy trying new things? \n 1 = Nearly always dislike \n 2 = Usually dislike \n 3 = It depends \n 4 = Usually enjoy \n 5 = Nearly always enjoy\" \n your partner responded: \n")
-            print(novelty)
+            printf("To the question, \"How much do you typically enjoy trying new things? \n 1 = Nearly always dislike \n 2 = Usually dislike \n 3 = It depends \n 4 = Usually enjoy \n 5 = Nearly always enjoy\" \n your partner responded: \n")
+            printf(novelty)
         if Rect16.collidepoint(pos) and pressed1:
             communication = linecache.getline("Responses.txt", 10)
-            print("To the quesstion, \"When you have a disagreement with someone, how soon do you prefer to discuss it with them? \n 1 = Never discuss \n 2 = Discuss eventually, if problem does not resolve on its own \n 3 = Discuss soon, after brief cooling off \n 4 = Discuss immediately\" \n your partner responded: \n")
-            print(communication)
+            printf("To the quesstion, \"When you have a disagreement with someone, how soon do you prefer to discuss it with them? \n 1 = Never discuss \n 2 = Discuss eventually, if problem does not resolve on its own \n 3 = Discuss soon, after brief cooling off \n 4 = Discuss immediately\" \n your partner responded: \n")
+            printf(communication)
         if Rect19.collidepoint(pos) and pressed1:
             tidy = linecache.getline("Responses.txt", 11)
-            print("To the question, \"How tidy do you typically keep your home? \n 1 = Very messy \n 2 = Somewhat Messy \n 3 = Neither messy nor tidy \n 4 = Somewhat tidy \n 5 = Very tidy\" your partner responded: \n")
-            print(tidy)
+            printf("To the question, \"How tidy do you typically keep your home? \n 1 = Very messy \n 2 = Somewhat Messy \n 3 = Neither messy nor tidy \n 4 = Somewhat tidy \n 5 = Very tidy\" your partner responded: \n")
+            printf(tidy)
         if Rect5.collidepoint(pos) and pressed1:
             move = linecache.getline("Responses.txt", 13)
-            print("To the question, \"Do you plan to move out of Ontario someday?\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" your partner responded: \n")
-            print(move)
+            printf("To the question, \"Do you plan to move out of Ontario someday?\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" your partner responded: \n")
+            printf(move)
         if Rect8.collidepoint(pos) and pressed1:
             freq = linecache.getline("Responses.txt", 14)
-            print("To the question, \"What is your ideal sexual frequency in a relationship? \n 1 = Never or almost never \n 2 = Once a month \n 3 = A few times a month \n 4 = Once a week \n 5 =  Twice a week \n 6 = A few times a week \n 7 = Daily \n\" your partner responded: \n")
-            print(freq)
+            printf("To the question, \"What is your ideal sexual frequency in a relationship? \n 1 = Never or almost never \n 2 = Once a month \n 3 = A few times a month \n 4 = Once a week \n 5 =  Twice a week \n 6 = A few times a week \n 7 = Daily \n\" your partner responded: \n")
+            printf(freq)
         if Rect9.collidepoint(pos) and pressed1:
             attraction = linecache.getline("Responses.txt", 21)
-            print("To the question, \"In a relationship, how important is physical attraction to you? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important \"\n your partner responded: \n")
-            print(attraction)
+            printf("To the question, \"In a relationship, how important is physical attraction to you? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important \"\n your partner responded: \n")
+            printf(attraction)
         if Rect11.collidepoint(pos) and pressed1:
             hobbies = linecache.getline("Responses.txt", 15)
-            print("To the question, \"What are your favorite hobbies? Please list up to three\"\n your partner responded: \n")
-            print(hobbies)
+            printf("To the question, \"What are your favorite hobbies? Please list up to three\"\n your partner responded: \n")
+            printf(hobbies)
         if Rect14.collidepoint(pos) and pressed1:
             activity = linecache.getline("Responses.txt", 16)
-            print("To the question, \"How much free time do you spend being active (i.e., out doing things) versus passive (e.g., TV, videogames)? \n 1 = Almost all passive \n 2 = More passive than active \n 3 = 50/50 \n 4 = More active than passive \n 5 = Almost all active\"\n your partner responded: \n")
-            print(activity)
+            printf("To the question, \"How much free time do you spend being active (i.e., out doing things) versus passive (e.g., TV, videogames)? \n 1 = Almost all passive \n 2 = More passive than active \n 3 = 50/50 \n 4 = More active than passive \n 5 = Almost all active\"\n your partner responded: \n")
+            printf(activity)
         if Rect17.collidepoint(pos) and pressed1:
             finance = linecache.getline("Responses.txt", 17)
-            print("To the question, \"When you have extra cash, what do you prefer to do with it? \n 1 = Save it all \n 2 = Save most of it \n 3 = Save some, spend some \n 4 = Spend most of it \n 5 = Spend it all\"\n your partner responded: \n")
-            print(finance)
+            printf("To the question, \"When you have extra cash, what do you prefer to do with it? \n 1 = Save it all \n 2 = Save most of it \n 3 = Save some, spend some \n 4 = Spend most of it \n 5 = Spend it all\"\n your partner responded: \n")
+            printf(finance)
         if Rect20.collidepoint(pos) and pressed1:
             cat = linecache.getline("Responses.txt", 18)
-            print("To the question, \"How do you feel about having a pet cat? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n")
-            print(cat)
+            printf("To the question, \"How do you feel about having a pet cat? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n")
+            printf(cat)
         if Rect3.collidepoint(pos) and pressed1:
             politics = linecache.getline("Responses.txt", 19)
-            print("To the question, \"What is your political orientation? \n 1 = Extremely Conservative \n 2 = very conservative \n 3 = somewhat conservsative \n 4 = Not conservative nor libeal \n 5 = Somewhat liberal \n 6 = Very liberal \n 7 = Extremely liberal\"\n your partner responded: \n")
-            print(politics)
+            printf("To the question, \"What is your political orientation? \n 1 = Extremely Conservative \n 2 = very conservative \n 3 = somewhat conservsative \n 4 = Not conservative nor libeal \n 5 = Somewhat liberal \n 6 = Very liberal \n 7 = Extremely liberal\"\n your partner responded: \n")
+            printf(politics)
         if Rect6.collidepoint(pos) and pressed1:
             urban = linecache.getline("Responses.txt", 20)
-            print("To the question, \"How urban versus rural is your ideal neighbourhood?\n 1 = Very rural (in the boonies) \n 2 = Somewhat rural (small town) \n 3 = Both (suburbs) \n 4 = Somewhat urban (small city) \n 5 = Very urban (big city)\"\n your partner responded: \n")
-            print(urban)
+            printf("To the question, \"How urban versus rural is your ideal neighbourhood?\n 1 = Very rural (in the boonies) \n 2 = Somewhat rural (small town) \n 3 = Both (suburbs) \n 4 = Somewhat urban (small city) \n 5 = Very urban (big city)\"\n your partner responded: \n")
+            printf(urban)
         if Rect12.collidepoint(pos) and pressed1:
             weed = linecache.getline("Responses.txt", 22)
-            print("To the question, \"How often do you prefer to use cannabis recreationally? \n 1 = Never \n 2 = A few times a year \n 3 = Once a month \n 4 = A few times a month \n 5 = Once a week \n 6 = A few times a week \n 7 = Daily \"\n your partner responded: \n")
-            print(weed)
+            printf("To the question, \"How often do you prefer to use cannabis recreationally? \n 1 = Never \n 2 = A few times a year \n 3 = Once a month \n 4 = A few times a month \n 5 = Once a week \n 6 = A few times a week \n 7 = Daily \"\n your partner responded: \n")
+            printf(weed)
         if Rect18.collidepoint(pos) and pressed1:
             labor = linecache.getline("Responses.txt", 24)
-            print("To the question, \"How important is it to you tht household tasks are equally shared in a relationship? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important\"\n your partner responded: \n")
-            print(labor)
+            printf("To the question, \"How important is it to you tht household tasks are equally shared in a relationship? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important\"\n your partner responded: \n")
+            printf(labor)
         if Rect21.collidepoint(pos) and pressed1:
             dog = linecache.getline("Responses.txt", 25)
-            print("To the question, \"How do you feel about having a pet dog? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n")
-            print(dog)
+            printf("To the question, \"How do you feel about having a pet dog? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n")
+            printf(dog)
         if Rect15.collidepoint(pos) and pressed1:
             jealousy = linecache.getline("Responses.txt", 23)
-            print("To the question, \"Do you consider yourself to be a jealous person, romantically? \n 1 = Never jealous \n 2 = Rarely jealous \n 3 = Sometimes jealous \n 4 = Often jealous \n 5 = Always jealous\"\n your partner responded: \n")
-            print(jealousy)
+            printf("To the question, \"Do you consider yourself to be a jealous person, romantically? \n 1 = Never jealous \n 2 = Rarely jealous \n 3 = Sometimes jealous \n 4 = Often jealous \n 5 = Always jealous\"\n your partner responded: \n")
+            printf(jealousy)

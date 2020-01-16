@@ -31,7 +31,7 @@ while True:
             sys.exit()
         if event.type == pygame.MOUSEBUTTONDOWN:
             end = time.time() - start
-            print("Selection took you " + str(end) + "seconds. \n")
+            printf("Selection took you " + str(end) + "seconds. \n")
         pygame.draw.line(screen, green, [0, 0], [1400, 0], 5)
         pygame.draw.line(screen, green, [0, 200], [1400, 200], 5)
         pygame.draw.line(screen, green, [0, 400], [1400, 400], 5)

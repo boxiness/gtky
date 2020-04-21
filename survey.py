@@ -49,7 +49,7 @@ P1_marijuana = input("How often do you prefer to use cannabis recreationally? \n
 file.write(P1_marijuana + "\n")
 P1_jealousy = input("Do you consider yourself to be a jealous person, romantically? \n 1 = Never jealous \n 2 = Rarely jealous \n 3 = Sometimes jealous \n 4 = Often jealous \n 5 = Always jealous \n")
 file.write(P1_jealousy + "\n")
-P1_Division_of_labour = input("How important is it to you tht household tasks are equally shared in a relationship? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important \n")
+P1_Division_of_labour = input("How important is it to you that household tasks are equally shared in a relationship? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important \n")
 file.write(P1_Division_of_labour + "\n")
 P1_Dog_attitudes = input("How do you feel about having a pet dog? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive \n")
 file.write(P1_Dog_attitudes + "\n")

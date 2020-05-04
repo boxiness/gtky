@@ -1,10 +1,15 @@
+from tkinter import *
+from tkinter import messagebox
 import pygame, sys, linecache, time
 from pygame.locals import*
+
+Tk().wm_withdraw() #to hide the main window
 
 def printf(string):
     with open("Responses.txt", "a") as file:
         file.write(string)
     print(string)
+    messagebox.showinfo('', string)
 
 pygame.init()
 
@@ -158,88 +163,72 @@ while True:
         
         if Rect1.collidepoint(pos):
             marriage = linecache.getline("Responses.txt", 5)
-            printf("To the question, \"Do you plan on getting married someday?\"\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\"\n your partner responded:\n")
-            printf(marriage)
+            printf("To the question, \"Do you plan on getting married someday?\"\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\"\n your partner responded:\n" + marriage)
         if Rect2.collidepoint(pos):
             religion = linecache.getline("Responses.txt", 12)
-            printf("To the question, \"How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious\" \n 5 = Deeply religious ,\n your partner responde:\n ")
-            printf(religion)
+            printf("To the question, \"How religious are you? \n 1 = Not at all religious \n 2 = A little bit religious \n 3 = Somewhat religious \n 4 = Quite religious\" \n 5 = Deeply religious ,\n your partner responde:\n " + religion)
         if Rect4.collidepoint(pos):
             printf("To the question, \"Do you plan to have children someday? \n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" \n your partner responded: \n ")
             children = linecache.getline("Responses.txt", 6)
             printf(children)
         if Rect7.collidepoint(pos):
             importancesex = linecache.getline("Responses.txt", 7)
-            printf("To the question, \"How important is sex to you in a relationship? \n 1 = Not at all important \n 2 = A little important \n 3 = Somewhat important \n 4 = Very Important \n 5 = Extremely Important\" \n your partner responded: \n")
-            printf(importancesex)
+            printf("To the question, \"How important is sex to you in a relationship? \n 1 = Not at all important \n 2 = A little important \n 3 = Somewhat important \n 4 = Very Important \n 5 = Extremely Important\" \n your partner responded: \n" + importancesex)
         if Rect10.collidepoint(pos):
             alcohol = linecache.getline("Responses.txt", 8)
-            printf("To the question, \"How often do you prefer to drink alcohol? \n 1 = Never \n 2 = A few times a year \n 3 = A few times a month \n 4 = Once a week \n 5 = Daily \"\n your partner responded: \n")
-            printf(alcohol)
+            printf("To the question, \"How often do you prefer to drink alcohol? \n 1 = Never \n 2 = A few times a year \n 3 = A few times a month \n 4 = Once a week \n 5 = Daily \"\n your partner responded: \n" + alcohol)
         if Rect13.collidepoint(pos):
             novelty = linecache.getline("Responses.txt", 9)
-            printf("To the question, \"How much do you typically enjoy trying new things? \n 1 = Nearly always dislike \n 2 = Usually dislike \n 3 = It depends \n 4 = Usually enjoy \n 5 = Nearly always enjoy\" \n your partner responded: \n")
-            printf(novelty)
+            printf("To the question, \"How much do you typically enjoy trying new things? \n 1 = Nearly always dislike \n 2 = Usually dislike \n 3 = It depends \n 4 = Usually enjoy \n 5 = Nearly always enjoy\" \n your partner responded: \n" + novelty)
         if Rect16.collidepoint(pos):
             communication = linecache.getline("Responses.txt", 10)
-            printf("To the quesstion, \"When you have a disagreement with someone, how soon do you prefer to discuss it with them? \n 1 = Never discuss \n 2 = Discuss eventually, if problem does not resolve on its own \n 3 = Discuss soon, after brief cooling off \n 4 = Discuss immediately\" \n your partner responded: \n")
-            printf(communication)
+            printf("To the quesstion, \"When you have a disagreement with someone, how soon do you prefer to discuss it with them? \n 1 = Never discuss \n 2 = Discuss eventually, if problem does not resolve on its own \n 3 = Discuss soon, after brief cooling off \n 4 = Discuss immediately\" \n your partner responded: \n" + communication)
         if Rect19.collidepoint(pos):
             tidy = linecache.getline("Responses.txt", 11)
-            printf("To the question, \"How tidy do you typically keep your home? \n 1 = Very messy \n 2 = Somewhat Messy \n 3 = Neither messy nor tidy \n 4 = Somewhat tidy \n 5 = Very tidy\" your partner responded: \n")
-            printf(tidy)
+            printf("To the question, \"How tidy do you typically keep your home? \n 1 = Very messy \n 2 = Somewhat Messy \n 3 = Neither messy nor tidy \n 4 = Somewhat tidy \n 5 = Very tidy\" your partner responded: \n" + tidy)
         if Rect5.collidepoint(pos):
             move = linecache.getline("Responses.txt", 13)
-            printf("To the question, \"Do you plan to move out of Ontario someday?\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" your partner responded: \n")
-            printf(move)
+            printf("To the question, \"Do you plan to move out of Ontario someday?\n 1 = Definitely not \n 2 = Probably not \n 3 = Maybe/Unsure \n 4 = Probably \n 5 = Definitely\" your partner responded: \n" + move)
         if Rect8.collidepoint(pos):
             freq = linecache.getline("Responses.txt", 14)
-            printf("To the question, \"What is your ideal sexual frequency in a relationship? \n 1 = Never or almost never \n 2 = Once a month \n 3 = A few times a month \n 4 = Once a week \n 5 =  Twice a week \n 6 = A few times a week \n 7 = Daily \n\" your partner responded: \n")
-            printf(freq)
+            printf("To the question, \"What is your ideal sexual frequency in a relationship? \n 1 = Never or almost never \n 2 = Once a month \n 3 = A few times a month \n 4 = Once a week \n 5 =  Twice a week \n 6 = A few times a week \n 7 = Daily \n\" your partner responded: \n" + freq)
         if Rect9.collidepoint(pos):
             attraction = linecache.getline("Responses.txt", 21)
-            printf("To the question, \"In a relationship, how important is physical attraction to you? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important \"\n your partner responded: \n")
-            printf(attraction)
+            printf("To the question, \"In a relationship, how important is physical attraction to you? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important \"\n your partner responded: \n" + attraction)
         if Rect11.collidepoint(pos):
             hobbies = linecache.getline("Responses.txt", 15)
-            printf("To the question, \"What are your favorite hobbies? Please list up to three\"\n your partner responded: \n")
-            printf(hobbies)
+            printf("To the question, \"What are your favorite hobbies? Please list up to three\"\n your partner responded: \n" + hobbies)
         if Rect14.collidepoint(pos):
             activity = linecache.getline("Responses.txt", 16)
-            printf("To the question, \"How much free time do you spend being active (i.e., out doing things) versus passive (e.g., TV, videogames)? \n 1 = Almost all passive \n 2 = More passive than active \n 3 = 50/50 \n 4 = More active than passive \n 5 = Almost all active\"\n your partner responded: \n")
-            printf(activity)
+            printf("To the question, \"How much free time do you spend being active (i.e., out doing things) versus passive (e.g., TV, videogames)? \n 1 = Almost all passive \n 2 = More passive than active \n 3 = 50/50 \n 4 = More active than passive \n 5 = Almost all active\"\n your partner responded: \n" + activity)
         if Rect17.collidepoint(pos):
             finance = linecache.getline("Responses.txt", 17)
-            printf("To the question, \"When you have extra cash, what do you prefer to do with it? \n 1 = Save it all \n 2 = Save most of it \n 3 = Save some, spend some \n 4 = Spend most of it \n 5 = Spend it all\"\n your partner responded: \n")
-            printf(finance)
+            printf("To the question, \"When you have extra cash, what do you prefer to do with it? \n 1 = Save it all \n 2 = Save most of it \n 3 = Save some, spend some \n 4 = Spend most of it \n 5 = Spend it all\"\n your partner responded: \n" + finance)
         if Rect20.collidepoint(pos):
             cat = linecache.getline("Responses.txt", 18)
-            printf("To the question, \"How do you feel about having a pet cat? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n")
-            printf(cat)
+            printf("To the question, \"How do you feel about having a pet cat? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n" + cat)
         if Rect3.collidepoint(pos):
             politics = linecache.getline("Responses.txt", 19)
-            printf("To the question, \"What is your political orientation? \n 1 = Extremely Conservative \n 2 = very conservative \n 3 = somewhat conservsative \n 4 = Not conservative nor libeal \n 5 = Somewhat liberal \n 6 = Very liberal \n 7 = Extremely liberal\"\n your partner responded: \n")
-            printf(politics)
+            printf("To the question, \"What is your political orientation? \n 1 = Extremely Conservative \n 2 = very conservative \n 3 = somewhat conservsative \n 4 = Not conservative nor libeal \n 5 = Somewhat liberal \n 6 = Very liberal \n 7 = Extremely liberal\"\n your partner responded: \n" + politics)
         if Rect6.collidepoint(pos):
             urban = linecache.getline("Responses.txt", 20)
-            printf("To the question, \"How urban versus rural is your ideal neighbourhood?\n 1 = Very rural (in the boonies) \n 2 = Somewhat rural (small town) \n 3 = Both (suburbs) \n 4 = Somewhat urban (small city) \n 5 = Very urban (big city)\"\n your partner responded: \n")
-            printf(urban)
+            printf("To the question, \"How urban versus rural is your ideal neighbourhood?\n 1 = Very rural (in the boonies) \n 2 = Somewhat rural (small town) \n 3 = Both (suburbs) \n 4 = Somewhat urban (small city) \n 5 = Very urban (big city)\"\n your partner responded: \n" + urban)
         if Rect12.collidepoint(pos):
             weed = linecache.getline("Responses.txt", 22)
-            printf("To the question, \"How often do you prefer to use cannabis recreationally? \n 1 = Never \n 2 = A few times a year \n 3 = Once a month \n 4 = A few times a month \n 5 = Once a week \n 6 = A few times a week \n 7 = Daily \"\n your partner responded: \n")
-            printf(weed)
+            printf("To the question, \"How often do you prefer to use cannabis recreationally? \n 1 = Never \n 2 = A few times a year \n 3 = Once a month \n 4 = A few times a month \n 5 = Once a week \n 6 = A few times a week \n 7 = Daily \"\n your partner responded: \n" + weed)
         if Rect18.collidepoint(pos):
             labor = linecache.getline("Responses.txt", 24)
-            printf("To the question, \"How important is it to you tht household tasks are equally shared in a relationship? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important\"\n your partner responded: \n")
-            printf(labor)
+            printf("To the question, \"How important is it to you tht household tasks are equally shared in a relationship? \n 1 = Not at all important \n 2 = Slightly important \n 3 = Moderately important \n 4 = Very important \n 5 = Extremely important\"\n your partner responded: \n" + labor)
         if Rect21.collidepoint(pos):
             dog = linecache.getline("Responses.txt", 25)
-            printf("To the question, \"How do you feel about having a pet dog? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n")
-            printf(dog)
+            printf("To the question, \"How do you feel about having a pet dog? \n 1 = Extremely negative \n 2 = Somewhat negative \n 3 = Neither positive nor negative \n 4 = Somewhat positive \n 5 = Extremely positive\"\n your partner responded: \n" + dog)
         if Rect15.collidepoint(pos):
             jealousy = linecache.getline("Responses.txt", 23)
-            printf("To the question, \"Do you consider yourself to be a jealous person, romantically? \n 1 = Never jealous \n 2 = Rarely jealous \n 3 = Sometimes jealous \n 4 = Often jealous \n 5 = Always jealous\"\n your partner responded: \n")
-            printf(jealousy)
+            printf("To the question, \"Do you consider yourself to be a jealous person, romantically? \n 1 = Never jealous \n 2 = Rarely jealous \n 3 = Sometimes jealous \n 4 = Often jealous \n 5 = Always jealous\"\n your partner responded: \n" + jealousy)
 
         end = time.time() - start
-        printf("Selection took you " + str(end) + "seconds. \n")
+        timing = "Selection took you " + str(end) + "seconds. \n"
+        with open("Responses.txt", "a") as file:
+            file.write(timing)
+        print(timing)
+        
